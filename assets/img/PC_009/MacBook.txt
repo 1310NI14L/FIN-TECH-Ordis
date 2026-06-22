@@ -1,0 +1,11 @@
+Processeur : Puce Apple M1 ou M2.
+
+Mémoire vive (RAM) : 8 Go.
+
+Stockage : 256 Go SSD.
+
+Écran : 13,3 pouces Retina.
+
+Caractéristique unique : Touch Bar (barre tactile au-dessus du clavier).
+
+Points forts : Ventilateur actif pour garder la performance sur la durée, prix plus accessible.
