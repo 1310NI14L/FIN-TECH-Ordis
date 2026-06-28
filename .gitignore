@@ -1,0 +1,9 @@
+# --- Fichiers système et IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Fichiers temporaires ou brouillons ---
+assets/img/carousel/Text _Carroussel.txt
+assets/img/products/**/*.txt

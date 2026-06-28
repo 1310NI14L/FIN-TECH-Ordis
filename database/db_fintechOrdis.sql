@@ -134,3 +134,23 @@ INSERT INTO `categories` (`nom_cat`, `descrip`) VALUES
 ('Étudiant', 'Excellent rapport qualité/prix, parfait pour les cours, rapports et exposés.'),
 ('Graphisme/Développement', 'Équipé pour supporter les logiciels lourds comme Photoshop, Illustrator ou VS Code.'),
 ('Gaming', 'Machines de guerre avec carte graphique dédiée pour le jeu et le montage vidéo.');
+
+USE fintech_db;
+-- Renommer la colonne d'inscription pour refléter une simple interaction
+ALTER TABLE `clients` 
+CHANGE COLUMN `date_inscription` `date_interaction` DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+-- Ajouter le champ pour stocker le chemin de la pièce justificative du devis (optionnel au niveau SQL, géré en PHP)
+ALTER TABLE `clients` 
+ADD COLUMN `image_justificatif` VARCHAR(255) DEFAULT NULL AFTER `provenance`;
+
+-- Modifier le type de la colonne état pour plus de propreté
+ALTER TABLE `produits` 
+MODIFY COLUMN `etat_produit` VARCHAR(50) NOT NULL COMMENT 'Neuf, Quasi-neuf, Reconditionné';
+
+-- Ajouter les colonnes de la fiche technique après les caractéristiques de base
+ALTER TABLE `produits` 
+ADD COLUMN `ecran_produit` VARCHAR(100) DEFAULT NULL AFTER `stockage_produit`,
+ADD COLUMN `carte_graphique` VARCHAR(100) DEFAULT NULL AFTER `ecran_produit`,
+ADD COLUMN `os_produit` VARCHAR(100) DEFAULT 'Windows 11' AFTER `carte_graphique`,
+ADD COLUMN `batterie_produit` VARCHAR(100) DEFAULT NULL AFTER `os_produit`;
