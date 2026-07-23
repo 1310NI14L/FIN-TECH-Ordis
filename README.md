@@ -1,7 +1,7 @@
 # 💻 FIN-TECH ORDIS — Notre Système de Vente Automatisé
 
-> **Le Catalogue Web Premium & son Dashboard CRM**  
-> Une solution web complète et responsive conçue sur-mesure pour automatiser le cycle de vente de matériels informatiques au Bénin. Notre objectif ? Permettre au client de trouver sa machine idéale et de générer son devis en moins de 4 clics, tout en offrant à l'administrateur un outil de gestion puissant pour centraliser ses flux de vente et ses stocks.
+> **Le Catalogue Web Premium & son Dashboard CRM**   
+> Une solution web complète, sécurisée et responsive conçue sur-mesure pour automatiser le cycle de vente de matériels informatiques au Bénin. Notre objectif ? Permettre au client de trouver sa machine idéale et de générer son devis en moins de 4 clics, tout en offrant à l'administrateur un outil de gestion puissant pour centraliser ses flux de vente et ses stocks.
 
 ---
 
@@ -9,21 +9,53 @@
 
 Pour garder un dépôt de code propre et léger, nous avons centralisé tous nos fichiers de travail et visuels sur Google Drive. Vous pouvez les consulter directement via ces liens :
 
-*   🎨 **[Découvrir les Maquettes UI/UX](https://drive.google.com/drive/folders/1y_em_LuYa7qb85SVc-hDLVeL7LB9_Sd8?usp=drive_link)** : L'intégralité du design fonctionnel de la plateforme (Fiche produit, Catalogue dynamique, Dashboard Admin).
-*   📑 **[Consulter les Documents Techniques](https://drive.google.com/drive/folders/16dg57nBEq3Nu3rnMbCjrQETqM7bxTem3?usp=drive_link)** : Notre dossier partagé regroupant le Cahier des Charges Technico-Fonctionnel, le Dictionnaire de Données (DDD) et les scripts d'architecture.
+* 🎨 **[Découvrir les Maquettes UI/UX](https://drive.google.com/drive/folders/1y_em_LuYa7qb85SVc-hDLVeL7LB9_Sd8?usp=drive_link)** : L'intégralité du design fonctionnel de la plateforme (Fiche produit, Catalogue dynamique, Dashboard Admin, Déconnexion).
+* 📑 **[Consulter les Documents Techniques](https://drive.google.com/drive/folders/16dg57nBEq3Nu3rnMbCjrQETqM7bxTem3?usp=drive_link)** : Notre dossier partagé regroupant le Cahier des Charges Technico-Fonctionnel, le Dictionnaire de Données (DDD) et les scripts d'architecture SQL.
 
 ---
 
 ## 👥 L'Équipe derrière le Projet
 
-Nous sommes une équipe de 5 étudiants passionnés, unissant nos compétences pour propulser l'activité de Fin-Tech Ordis à un niveau supérieur :
-*   **Daniel AHOUANSOU** 
-*   **Edna BAKARY**
-*   **Amos TOTIN**
-*   **Bilal PEDRO**
-*   **Bel-Mira KOUELO-ALLADASSI**
+Initialement composée de 5 membres, l'équipe est actuellement constituée de **4 développeurs actifs** suite au départ de Bel-Mira KOUELO-ALLADASSI en cours de route. Nous avons redistribué les charges pour mener le projet à terme :
+
+* 💻 **Daniel AHOUANSOU** (Membre 4) — *Architecte Base de Données, DBA & Développeur Back-End (PDO/MySQL, Configuration DB)*
+* 🔐 **Amos TOTIN** (Membre 3) — *Développeur Back-End, Sécurité Admin & Gestionnaire des Sessions/Auth*
+* 🎨 **Edna BAKARY** (Membre 2) — *Développeuse Front-End, Design UI/UX & Intégration*
+* ⚙️ **Bilal PEDRO** (Membre 1) — *Développeur Full-Stack & Intégration des composants*
+
+> *Note : Bel-Mira KOUELO-ALLADASSI a participé au lancement initial du projet avant de quitter l'équipe.*
 
 ---
+
+## 🏗️ Architecture du Projet
+
+```text
+fintech-ordis/
+├── admin/                     # Espace d'administration réservé (Sécurité Membre 3)
+│   ├── includes/              # Composants réutilisables (sidebar.php avec blocs dynamiques)
+│   ├── clients_crm.php        # Interface CRM de gestion des clients
+│   ├── crud_produits.php      # Gestion de l'inventaire des ordinateurs
+│   ├── dashboard.php          # Tableau de bord principal avec cartes KPI
+│   ├── deconnexion.php        # Confirmation et destruction de session sécurisée
+│   ├── login.php              # Page de connexion administrateur
+│   ├── messagerie.php         # Centre de messagerie privée
+│   ├── moderation.php         # Gestion et modération des avis
+│   └── parametre.php          # Réglages du système
+├── assets/                    # Ressources statiques
+│   ├── css/                   # Styles (Bootstrap 5, FontAwesome, admin-style.css, style.css)
+│   ├── js/                    # Scripts JS Vanilla et dépendances (bootstrap.bundle.min.js)
+│   └── img/                   # Images des produits et fonds
+├── config/                    # Configuration globale Back-End (Responsabilité Membre 4)
+│   ├── db.php                 # Connexion sécurisée PDO (charset utf8mb4, ERRMODE_EXCEPTION)
+│   └── functions.php          # Fonctions utilitaires Back-End
+├── database/                  # Scripts SQL de la base de données
+│   ├── schema.sql             # Structure relationnelle MySQL (InnoDB)
+│   └── seeds.sql              # Jeux de données de test
+├── includes/                  # Composants réutilisables côté public (header.php, footer.php)
+├── catalogue.php              # Page du catalogue avec filtres dynamiques
+├── index.php                  # Page d'accueil du site Web
+├── produit.php                # Fiche produit détaillée
+└── README.md                  # Documentation du projet
 
 ## 🚀 Ce que fait l'Application (Fonctionnalités clés)
 
@@ -51,8 +83,8 @@ Nous sommes une équipe de 5 étudiants passionnés, unissant nos compétences p
 *   **Outils embarqués :** `DomPDF` (pour générer les devis au format PDF officiel) et `PHPMailer` (pour les envois d'e-mails professionnels).
 
 ---
-
 ## 📐 Notre Méthodologie de Travail
 
-1.  **Le Visuel d'abord ("Front-First") :** Nous avons fait le choix de coder, styliser et valider l'intégralité de nos interfaces avec de fausses données pour figer le design avant d'attaquer la logique serveur.
-2.  **Règle de symétrie absolue :** Pour éviter les maux de tête lors de la connexion à la base de données, les attributs `name=""` de nos formulaires HTML sont de parfaits miroirs des champs définis dans notre Dictionnaire de Données (DDD).
+1. **Le Visuel d'abord ("Front-First") :** Nous avons fait le choix de coder, styliser et valider l'intégralité de nos interfaces avec de fausses données pour figer le design avant d'attaquer la logique serveur.
+2. **Règle de symétrie absolue :** Pour éviter les maux de tête lors de la connexion à la base de données, les attributs `name=""` de nos formulaires HTML sont de parfaits miroirs des champs définis dans notre Dictionnaire de Données (DDD).
+3. **Travail indépendant et modulaire :** Chaque membre de l'équipe travaille de manière autonome sur ses responsabilités respectives (Front-End, Back-End, Sécurité, Infrastructures DB), en s'appuyant sur des interfaces et des conventions d'architecture communes pour garantir une intégration sans friction.
