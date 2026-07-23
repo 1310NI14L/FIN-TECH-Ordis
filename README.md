@@ -9,7 +9,7 @@
 
 Pour garder un dépôt de code propre et léger, nous avons centralisé tous nos fichiers de travail et visuels sur Google Drive. Vous pouvez les consulter directement via ces liens :
 
-* 🎨 **[Découvrir les Maquettes UI/UX](https://drive.google.com/drive/folders/1y_em_LuYa7qb85SVc-hDLVeL7LB9_Sd8?usp=drive_link)** : L'intégralité du design fonctionnel de la plateforme (Fiche produit, Catalogue dynamique, Dashboard Admin, Déconnexion).
+* 🎨 **[Découvrir les Maquettes UI/UX](https://drive.google.com/drive/folders/16dg57nBEq3Nu3rnMbCjrQETqM7bxTem3?usp=drive_link)** : L'intégralité du design fonctionnel de la plateforme (Fiche produit, Catalogue dynamique, Dashboard Admin, Déconnexion) qui est un sous-dossiers du dossier des documents techniques.
 * 📑 **[Consulter les Documents Techniques](https://drive.google.com/drive/folders/16dg57nBEq3Nu3rnMbCjrQETqM7bxTem3?usp=drive_link)** : Notre dossier partagé regroupant le Cahier des Charges Technico-Fonctionnel, le Dictionnaire de Données (DDD) et les scripts d'architecture SQL.
 
 ---
