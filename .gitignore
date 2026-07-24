@@ -7,3 +7,4 @@ Thumbs.db
 # --- Fichiers temporaires ou brouillons ---
 assets/img/carousel/Text _Carroussel.txt
 assets/img/products/**/*.txt
+test_db.php
