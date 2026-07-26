@@ -23,11 +23,8 @@ require_once __DIR__ . '/config/db.php'; // Charge la config si ce n'est pas dé
 
     <!-- Contenu Principal -->
 
-    <a href="#" class="btn btn-success">
-        <i class="fa-brands fa-whatsapp"></i> Commander sur WhatsApp
-    </a>
 
-    <i class="fa-solid fa-cart-shopping"></i>
+
     <!-- Footer / Pied de page -->
     <?php include __DIR__ . '/includes/footer.php'; ?>
 
