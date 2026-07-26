@@ -26,10 +26,19 @@ require_once __DIR__ . '/../config/db.php';
         <!-- Barre latérale commune Admin -->
         <?php include __DIR__ . '/includes/sidebar.php'; ?>
 
-        <!-- Zone de contenu principal du Dashboard -->
-        <main class="flex-grow-1 p-4 bg-light min-vh-100">
-            
-        </main>
+        <!-- 2. Zone de droite : Conteneur vertical (Header + Contenu principal) -->
+        <div class="main-wrapper flex-grow-1 d-flex flex-column">
+
+            <!-- Header en haut de la zone de droite -->
+            <?php include __DIR__ . '/includes/header_admin.php'; ?>
+
+            <!-- Zone de contenu principal en dessous du header -->
+            <main class="flex-grow-1 p-4 bg-light">
+                <!-- C'est ici que tu mettras tes cartes CRM, le tableau et la fiche client, la messagerie, la modération et tout autres -->
+            </main>
+
+        </div>
+
 
     </div>
 
