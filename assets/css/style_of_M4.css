@@ -1,0 +1,62 @@
+/* ======================================
+   ICÔNES STATISTIQUES (Couleurs spécifiques)
+   ====================================== */
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Total Clients (Bleu) */
+.tot_clients {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+/* Devis Téléchargés (Vert) */
+.devis_downloads {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+/* Commentaires Reçus (Orange) */
+.avis_recu {
+    background-color: #fff7ed;
+    color: #ea580c;
+}
+
+/* Prospects Chauds (Rouge) */
+.prospect {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+/* ======================================
+   BULLES DE CHAT (Styles asymétriques)
+   ====================================== */
+
+.alert-light {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border-top-left-radius: 2px;
+}
+
+.alert-info {
+    background-color: #eff6ff !important;
+    color: #1e40af !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border-top-right-radius: 2px;
+}
+
+
