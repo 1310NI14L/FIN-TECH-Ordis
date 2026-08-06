@@ -1,61 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* ==========================================================================
-   1. VARIABLES DE DESIGN (Design Tokens)
-   ========================================================================== */
-:root {
-    /* Couleurs Principales */
-    --primary-color: #0d6efd;       /* Bleu principal (Bootstrap / Action) */
-    --primary-hover: #0b5ed7;       /* Bleu survol */
-    --secondary-color: #6c757d;     /* Gris neutre */
-    
-    /* Couleurs de Statut & Actions */
-    --success-color: #198754;       /* Vert (Succès / Validation) */
-    --danger-color: #dc3545;        /* Rouge (Suppression / Déconnexion) */
-    --warning-color: #ffc107;       /* Jaune (Avertissements) */
-    
-    /* Arrière-plans & Surface */
-    --bg-body: #f4f6f9;             /* Fond d'écran global légèrement gris/bleu */
-    --bg-card: #ffffff;             /* Fond des cartes et du contenu */
-    --bg-sidebar: #06142b;          /* Sombre / Slate pour la barre latérale */
-    
-    /* Typographie & Textes */
-    --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --text-color: #334155;          /* Texte principal (Gris foncé agréable) */
-    --text-muted: #64748b;          /* Texte secondaire / Légendes */
-    --text-light: #f8fafc;          /* Texte clair pour zones sombres */
-    
-    /* Bordures & Ombres */
-    --border-color: #e2e8f0;        /* Lignes de séparation fines */
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 15px;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    
-    /* Transitions */
-    --transition-fast: all 0.2s ease-in-out;
-}
+@import url('base.css');
 
 /* ==========================================================================
    2. RESET & NORMALISATION
    ========================================================================== */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 /* ==========================================================================
    3. STYLES DE BASE (ELEMENTS HTML)
    ========================================================================== */
 body {
     font-family: var(--font-family-base);
-    background-color: var(--bg-body);
-    color: var(--text-color);
+    background-color: var(--color-bg-white);
+    color: var(--color-text-primary);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased; /* Rendu de police plus net */
     height: 100%;
@@ -65,13 +22,13 @@ body {
 
 /* Liens */
 a {
-    color: var(--primary-color);
+    color: var(--color-primary);
     text-decoration: none;
     transition: var(--transition-fast);
 }
 
 a:hover {
-    color: var(--primary-hover);
+    color: var(--color-primary-dark);
 }
 
 /* Listes */
@@ -88,7 +45,7 @@ img {
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
-    color: #0f172a;
+    color: var(--color-text-primary);
     font-weight: 600;
     line-height: 1.2;
 }
@@ -104,8 +61,8 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .sidebar{
-    background-color: var(--bg-sidebar);
-    color: var(--text-light);
+    background-color: var(--color-admin-sidebar-bg);
+    color: var(--color-text-white);
     height: 100vh;
     width: 260px;
     overflow-y: auto;
@@ -122,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar .head-side{
     .brand-blue, p{
-        color: var(--primary-color);
+        color: var(--color-primary);
     }
 
     p{
@@ -133,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar .head-side h2{
     .brand-white{
-        color: var(--text-light);
+        color: var(--color-primary-light);
     } 
 }
 
@@ -147,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     margin: 0.5rem;
     padding: 0.3rem 1rem;
-    color: var(--text-light);
+    color: var(--color-text-white);
     transition: var(--transition-fast);
 }
 
@@ -157,19 +114,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 15px;
     text-align: center;
     border-radius: var(--radius-lg);
-    background: #111e38;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
 }
 
 .sidebar .foot-side .support-help .support-icon, .sidebar .foot-side .log-out user-icon{
     width: 44px;
     height: 44px;
-    background-color: var(--primary-color);
+    background-color: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 12px auto;
-    color: var(--text-light);
+    color: var(--color-text-white);
     font-size: 1.2rem;
 }
 
@@ -180,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar .foot-side .support-help .support-text, .sidebar .foot-side .log-out .support-text{
-    color: var(--text-muted);
+    color: var(--color-bg-white);
     margin: 0 0 16px 0;
     line-height: 1.4;
     font-size: 0.9rem;
@@ -190,17 +147,17 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: #0066ff;
-    color: var(--text-light);
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
     border-radius: var(--radius-sm);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     transition: background-color var(--transition-fast);
     box-sizing: border-box;
 }
 
 .sidebar .foot-side .support-help a:hover{
-    background-color: #0052cc;
+    background-color: var(--color-primary-dark);
 }
 
 /* ==========================================
@@ -209,10 +166,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Structure globale du Header */
 .top-header {
-  background-color: #ffffff;
+  background-color: var(--color-bg-white);
   height: 70px;
   padding: 0 24px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 99;
@@ -236,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-toggle-btn {
   background: transparent;
   border: none;
-  color: #475569;
+  color: var(--color-admin-sidebar-bg);
   font-size: 1.1rem;
   cursor: pointer;
   padding: 6px;

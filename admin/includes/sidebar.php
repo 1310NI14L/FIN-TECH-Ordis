@@ -48,7 +48,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         class="<?= ($currentPage == 'parametre.php') ? 'active btn btn-primary' : '' ?> text-white"><i
                             class="fa-solid fa-gear" aria-hidden="true"></i> Paramètres</a></li>
                 <li><a href="deconnexion.php"
-                        class="<?= ($currentPage == 'deconnexion.php') ? 'active' : '' ?> btn btn-danger"><i
+                        class="<?= ($currentPage == 'deconnexion.php') ? 'active' : '' ?> btn btn-danger text-white"><i
                             class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Déconnexion</a></li>
             </ul>
         </div>

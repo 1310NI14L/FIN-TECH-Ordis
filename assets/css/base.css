@@ -10,6 +10,7 @@
   --color-primary:        #1A73E8;   /* Bleu principal — boutons, liens, accents */
   --color-primary-dark:   #1558B0;   /* Bleu foncé — hover boutons primaires */
   --color-primary-light:  #E8F0FE;   /* Bleu très clair — fonds de cartes, badges */
+  --secondary-color: #6c757d;     /* Gris neutre */
 
   /* ── COULEURS SECONDAIRES / ACCENTUATION ───────────────── */
   --color-accent-cyan:    #00BFFF;   /* Cyan — mot "Ordis" dans le logo */
@@ -66,7 +67,7 @@
   --color-discount-badge: #EF4444;   /* Badge réduction "-10%" — rouge */
 
   /* ── ADMIN — SIDEBAR ────────────────────────────────────── */
-  --color-admin-sidebar-bg:      #0D1B2A;
+  --color-admin-sidebar-bg:      #08233f;
   --color-admin-sidebar-active:  #1A73E8;   /* Item actif — bleu */
   --color-admin-sidebar-hover:   rgba(255,255,255,0.08);
   --color-admin-sidebar-text:    #CBD5E1;
@@ -108,68 +109,10 @@
 
 }
 
-
-/* ============================================================
-   UTILITAIRES RAPIDES (classes de base réutilisables)
-   ============================================================ */
-
-/* Textes */
-.text-primary   { color: var(--color-primary); }
-.text-muted     { color: var(--color-text-muted); }
-.text-white     { color: var(--color-text-white); }
-.text-price     { color: var(--color-price); font-weight: 700; }
-.text-old-price { color: var(--color-price-old); text-decoration: line-through; }
-
-/* Fonds */
-.bg-dark        { background-color: var(--color-dark-navy); }
-.bg-light       { background-color: var(--color-bg-light); }
-.bg-primary     { background-color: var(--color-primary); }
-
-/* Boutons de base */
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-button);
-  transition: background-color var(--transition-fast);
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-}
-
-.btn-whatsapp {
-  background-color: var(--color-accent-green);
-  color: var(--color-text-white);
-  border: none;
-  border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast);
-}
-.btn-whatsapp:hover {
-  background-color: var(--color-accent-green-dark);
-}
-
-.btn-danger {
-  background-color: var(--color-logout);
-  color: var(--color-text-white);
-  border: none;
-  border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast);
-}
-.btn-danger:hover {
-  background-color: var(--color-logout-hover);
-}
-
-/* Badges statuts */
-.badge-new      { color: var(--color-status-new);     background: var(--color-status-new-bg); }
-.badge-used     { color: var(--color-status-used);    background: var(--color-status-used-bg); }
-.badge-instock  { color: var(--color-status-instock); background: var(--color-status-instock-bg); }
-.badge-lowstock { color: var(--color-status-lowstock);background: var(--color-status-lowstock-bg); }
-.badge-outstock { color: var(--color-status-outstock);background: var(--color-status-outstock-bg); }
-
-/* Badges catégories */
-.badge-bureautique { color: var(--color-cat-bureautique); background: var(--color-cat-bureautique-bg); }
-.badge-etudiant    { color: var(--color-cat-etudiant);    background: var(--color-cat-etudiant-bg); }
-.badge-graphisme   { color: var(--color-cat-graphisme);   background: var(--color-cat-graphisme-bg); }
-.badge-gaming      { color: var(--color-cat-gaming);      background: var(--color-cat-gaming-bg); }
-base.css
