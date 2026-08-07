@@ -23,7 +23,6 @@ require_once __DIR__ . '/config/db.php'; // Charge la config si ce n'est pas dé
 
     <!-- Contenu Principal -->
 
-
     <!-- Footer / Pied de page -->
     <?php include __DIR__ . '/includes/footer.php'; ?>
 

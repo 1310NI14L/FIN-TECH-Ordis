@@ -1,4 +1,4 @@
-@import('base.css');
+@import url('base.css');
 
 /* ======================================
    ICÔNES STATISTIQUES (Couleurs spécifiques)
@@ -7,7 +7,7 @@
 .stat-icon {
     width: 42px;
     height: 42px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,26 +17,26 @@
 
 /* Total Clients (Bleu) */
 .tot_clients {
-    background-color: #eff6ff;
-    color: #2563eb;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
 }
 
 /* Devis Téléchargés (Vert) */
 .devis_downloads {
-    background-color: #f0fdf4;
-    color: #16a34a;
+    background-color: var(--color-bg-light);
+    color: var(--color-accent-green);
 }
 
 /* Commentaires Reçus (Orange) */
 .avis_recu {
-    background-color: #fff7ed;
-    color: #ea580c;
+    background-color: var(--color-bg-light);
+    color: var(--color-kpi-orange);
 }
 
 /* Prospects Chauds (Rouge) */
 .prospect {
-    background-color: #fef2f2;
-    color: #dc2626;
+    background-color: var(--color-bg-light);
+    color: var(--color-notif-badge);
 }
 
 /* ======================================
@@ -44,8 +44,8 @@
    ====================================== */
 
 .alert-light {
-    background-color: #f1f5f9 !important;
-    color: #334155 !important;
+    background-color: var(--color-bg-light) !important;
+    color: var(--color-text-secondary) !important;
     border: none;
     padding: 8px 12px;
     border-radius: 10px;
@@ -53,8 +53,8 @@
 }
 
 .alert-info {
-    background-color: #eff6ff !important;
-    color: #1e40af !important;
+    background-color: var(--color-bg-info) !important;
+    color: var(--color-text-link) !important;
     border: none;
     padding: 8px 12px;
     border-radius: 10px;
